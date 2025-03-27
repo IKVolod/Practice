@@ -1,0 +1,273 @@
+﻿/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-width: 600px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    height: 65px;
+}
+
+.mainTitle h1 {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*font-size: 5vh; /* Розмір шрифта залежить від ширини вікна */
+    font-size: 45px;
+}
+
+.mainTitle h2 {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*font-size: 2.5vh; /* Розмір шрифта залежить від ширини вікна */
+    font-size: 20px;
+}
+
+/*.mainTitle h1{
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.mainTitle h2{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}*/
+
+.mainTitle h1,
+.mainTitle h2 {
+    white-space: nowrap;
+    display: block; /* Забезпечує блочне відображення */
+    margin: 0px; /* Видаляє стандартні відступи */
+}
+
+
+/*header h1 {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links .btn {
+    color: black !important; /* Робить текст чорним */
+}
+
+/* Сontact Section */
+.contact {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+}
+
+.contact p {
+    margin-bottom: 30px; /* Відступ між параграфом і кнопкою */
+}
+
+.btn {
+    background-color: white;
+    color: #007BFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: auto;
+}
+
+/* Services */
+#services {
+    padding: 50px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє переносити елементи */
+    justify-content: center; /* Центрує вміст */
+    gap: 20px;
+    text-align: center; /* Центрування тексту */
+}
+
+.service {
+    flex: 1 1 200px; /* Мінімальна ширина 200px, гнучке розширення */
+    max-width: 300px; /* Максимальна ширина */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+#reviews {
+    text-align: center;
+    padding: 20px;
+}
+
+.reviews-header {
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.review {
+    font-family: monospace, monospace;
+    white-space: pre-wrap;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    min-height: 150px;
+    text-align: left;
+}
+
+/* Form */
+#order {
+    text-align: center;
+    padding: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 50px;
+    max-height: 200px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    color: black;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu-items {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+    opacity: 0; /* Початкова непрозорість */
+    transform: translateY(-20px); /* Початковий зсув */
+    transition: opacity 1s ease, transform 1s ease; /* Плавність зміни */
+}
+
+.menu-items.active {
+    display: flex;
+    opacity: 1; /* Кінцева непрозорість */
+    transform: translateY(0); /* Скидаємо зсув */
+}
+
+.menu-items li {
+    padding: 10px;
+    text-align: left; /* Вирівнюємо текст по лівому краю */
+    border-bottom: 1px solid #ddd; /* Тонка лінія між пунктами */
+}
+
+.menu-items li:last-child {
+    border-bottom: none; /* Видаляємо лінію у останнього пункту */
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.menu-items li a:hover {
+    background-color: #f0f0f0;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+}
